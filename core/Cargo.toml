@@ -1,0 +1,21 @@
+[package]
+name = "core"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dlib-face-recognition-cv = { path = "../cv" }
+opencv = { version = "0", features = ["clang-runtime", "default"] }
+dlib-face-recognition = { features = ["embed-all"] }
+image = { version = "0" }
+config = "0"
+ffmpeg-next = "7.0.0"
+ffmpeg-sys-next = "7.0.0"
+tokio = { version = "1.0", features = ["full"] }
+dotenv = "0"
+
+[dependencies.serde]
+version = "1"
+features = ["derive"]
